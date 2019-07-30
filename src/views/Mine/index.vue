@@ -1,7 +1,9 @@
 <template>
     <div>
         <Header title="我的"/>
-        Hello Mine
+        <div id="content">
+            <Login />
+        </div>
         <TabBar />
     </div>
 </template>
@@ -11,11 +13,13 @@
 import Header from '@/components/Header';
 // 引入TabBar组件
 import TabBar from '@/components/TabBar';
+import Login from '@/components/Login';
     export default {
         name: "Mine",
         components: {
             Header,
-            TabBar
+            TabBar,
+            Login
         }
     }
 </script>

@@ -6,7 +6,23 @@
 
 <script>
     export default {
-        name: "City"
+        name: "City",
+        mounted() {
+            this.axios.get('/api/cityList').then(res => {
+                console.log(res);
+                let msg = res.data.msg;
+                if(msg === 'ok') {
+                    let cities = res.data.data.cities;
+                    this.fromCityList(cities);
+                } 
+            })
+        },
+        methods: {
+            fromCityList(cities) {
+                let cityList = [];
+                let hotList = [];
+            }
+        }
     }
 </script>
 
